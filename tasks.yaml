@@ -1,1 +1,176 @@
-new repo
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alex Mercer - Portfolio</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav id="home">
+    <div class="profile_name">
+      Alex Mercer
+      <div class="contact_info">
+        <img src="html_finalprojimages/envelope.png" alt="Email icon" />
+        alex.mercer@example.com
+      </div>
+      <div style="clear:both;"></div>
+      <div class="contact_info">
+        <img src="html_finalprojimages/phone.png" alt="Phone icon" />
+        +1 (555) 234-5678
+      </div>
+    </div>
+
+    <div class="topdiv">
+      <a class="topmenu" href="#about-me">About Me</a>
+      <a class="topmenu" href="#skills">Skills</a>
+      <a class="topmenu" href="#projects">Projects</a>
+      <a class="topmenu" href="#recommendations">Recommendations</a>
+    </div>
+  </nav>
+
+  <!-- About Me Section -->
+  <section id="about-me" class="container">
+    <div>
+      <!-- Replace with your own unique profile image -->
+      <img src="html_finalprojimages/profile_avatar.png" alt="Alex Mercer Profile" class="profile_image" />
+    </div>
+
+    <div>
+      <h1>
+        Hi, I'm Alex Mercer! <img src="html_finalprojimages/waving-hand.png" width="50px" alt="Waving hand" />
+      </h1>
+      <p>
+        I am a dedicated full-stack web developer with a strong foundation in front-end design and back-end logic. 
+        I specialize in building clean, responsive web applications using HTML5, CSS3, JavaScript, and modern cloud frameworks. 
+        I enjoy turning complex problems into intuitive digital experiences.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div style="clear:both;"></div>
+
+    <div class="all_skills">
+      <!-- Default Skills -->
+      <div class="skill">
+        <img src="html_finalprojimages/html5.png" alt="HTML5 Logo" />
+        <h6>HTML</h6>
+        <p>3 years experience</p>
+      </div>
+
+      <div class="skill">
+        <img src="html_finalprojimages/js.jpeg" alt="JavaScript Logo" />
+        <h6>JavaScript</h6>
+        <p>2 years experience</p>
+      </div>
+
+      <!-- 3 Newly Added Skills -->
+      <div class="skill">
+        <img src="html_finalprojimages/CSS3.png" alt="CSS3 Logo" />
+        <h6>CSS3</h6>
+        <p>3 years experience</p>
+      </div>
+
+      <div class="skill">
+        <img src="html_finalprojimages/react.png" alt="React Logo" />
+        <h6>React</h6>
+        <p>1.5 years experience</p>
+      </div>
+
+      <div class="skill">
+        <img src="html_finalprojimages/node.png" alt="Node.js Logo" />
+        <h6>Node.js</h6>
+        <p>1 year experience</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects" id="projects">
+    <h2>Projects</h2>
+    <div style="clear:both;"></div>
+
+    <div id="projects-container" class="projects-container">
+      <div class="project-card">
+        <h3>EcoTrack Carbon Footprint Calculator</h3>
+        <ul>
+          <li>Built an interactive web dashboard that calculates daily household carbon emissions using HTML5, CSS3, and vanilla JavaScript.</li>
+        </ul>
+      </div>
+      <hr>
+      <div class="project-card">
+        <h3>TaskFlow Kanban Board</h3>
+        <ul>
+          <li>Developed a drag-and-drop task management application with local storage persistence and priority filtering.</li>
+        </ul>
+      </div>
+      <hr>
+      <div class="project-card">
+        <h3>WeatherPulse Forecast App</h3>
+        <ul>
+          <li>Created a responsive weather lookup tool integrating RESTful APIs to display 5-day forecasts and real-time air quality metrics.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <div style="clear:both;"></div>
+
+  <!-- Recommendations Section -->
+  <section id="recommendations">
+    <h2>Recommendations</h2>
+    <div style="clear:both;"></div>
+    <div class="all_recommendations" id="all_recommendations">
+      <div class="recommendation">
+        <span>&#8220;</span>
+        Alex consistently delivers clean, well-documented code ahead of schedule. Their ability to troubleshoot front-end layout issues and optimize page performance made a huge impact on our team's product launch.
+        <span>&#8221;</span>
+      </div>
+      <div class="recommendation">
+        <span>&#8220;</span>
+        Working with Alex was an absolute pleasure. They bring a rare combination of strong technical problem-solving and clear communication, ensuring every feature aligns with user needs.
+        <span>&#8221;</span>
+      </div>
+      <div class="recommendation">
+        <span>&#8220;</span>
+        Alex quickly mastered our codebase and contributed meaningful UI improvements within their first week. Any engineering team would benefit from their work ethic and attention to detail.
+        <span>&#8221;</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recommendation Form -->
+  <section id="contact">
+    <div class="flex_center">
+      <fieldset>
+        <legend class="introduction">Leave a Recommendation</legend>
+        <input type="text" placeholder="Name (Optional)" id="recommender_name"> <br/>
+        <textarea id="new_recommendation" cols="50" rows="10" placeholder="Message"></textarea>
+        <div class="flex_center">
+          <button id="recommend_btn" onclick="addRecommendation()">Submit</button>
+        </div>
+      </fieldset>
+    </div>
+  </section>
+
+  <!-- Home Icon Button -->
+  <div class="iconbutton">
+    <a href="#home" title="Back to Top">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" width="40px">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    </a>
+  </div>
+
+  <!-- Confirmation Popup -->
+  <div class="popup" id="popup">
+    <img src="html_finalprojimages/checkmark--outline.svg" alt="Checkmark" />
+    <h3>Thank you for leaving a recommendation!</h3>
+    <button onclick="showPopup(false)">Ok</button>
+  </div>
+</body>
+</html>new repo
